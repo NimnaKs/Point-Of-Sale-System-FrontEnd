@@ -341,6 +341,31 @@ nav .profile-details i{
   }
 }
 
-.home-content{
-    display: none;
+thead th {
+  color: #fff;
+}
+
+.card {
+  border-radius: .5rem;
+}
+
+.table-scroll {
+  border-radius: .5rem;
+}
+
+.icon{
+  background-color: #e05260;
+}
+
+.home-content .overview-boxes{
+  display: none;
+}
+
+.card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+.add-customer-btn {
+  margin-top: 20px;
 }

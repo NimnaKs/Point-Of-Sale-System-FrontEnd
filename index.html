@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="style.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-qYU6qFLwV6xY+Lgh3tkhEcIvDJ4Iv9XdsdM50ffNv2A5xDXti9L0tz6DkraA3p2D46J8gQ/l8DWU6+fpOcQz2DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -59,7 +64,7 @@
         <nav>
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn'></i>
-                <span class="dashboard">Dashboard</span>
+                <span class="dashboard" style="text-align: center;">Customer Details</span>
             </div>
             <div class="search-box">
                 <input type="text" placeholder="Search...">
@@ -71,9 +76,6 @@
             </div>
         </nav>
 
-    </section>
-
-    <section class="dashboard-common">
         <div class="home-content">
             <div class="overview-boxes">
                 <div class="box">
@@ -121,6 +123,267 @@
                     <i class='bx bxs-dollar-circle cart three'></i>
                 </div>
             </div>
+
+            <div class="customer-content">
+                <section class="intro">
+                    <div class="bg-image h-100" style="background-color: #f5f7fa;">
+                        <div class="mask d-flex align-items-center h-100">
+                            <div class="container">
+                                <div class="row justify-content-center">
+                                    <div class="col-12">
+                                        <div class="card">
+                                            <div class="card-body p-0">
+                                                <div class="table-responsive table-scroll"
+                                                    data-mdb-perfect-scrollbar="true"
+                                                    style="position: relative; height: 500px;">
+                                                    <table class="table table-striped mb-0">
+                                                        <thead style="background-color: #002d72; text-align: center;">
+                                                            <tr>
+                                                                <th scope="col">ID</th>
+                                                                <th scope="col">Name</th>
+                                                                <th scope="col">Address</th>
+                                                                <th scope="col">Contact</th>
+                                                                <th scope="col">Email</th>
+                                                                <th scope="col">Update</th>
+                                                                <th scope="col">Delete</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <th>cust-001</th>
+                                                                <td>Nimna Kaveesha</td>
+                                                                <td>Kalutara</td>
+                                                                <td>0768539902</td>
+                                                                <td>nimnakaveesha123456@gmail.com</td>
+                                                                <td>
+                                                                    <button class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#customerModal"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Delete
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>cust-001</th>
+                                                                <td>Nimna Kaveesha</td>
+                                                                <td>Kalutara</td>
+                                                                <td>0768539902</td>
+                                                                <td>nimnakaveesha123456@gmail.com</td>
+                                                                <td>
+                                                                    <button class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#customerModal"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Delete
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>cust-001</th>
+                                                                <td>Nimna Kaveesha</td>
+                                                                <td>Kalutara</td>
+                                                                <td>0768539902</td>
+                                                                <td>nimnakaveesha123456@gmail.com</td>
+                                                                <td>
+                                                                    <button class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#customerModal"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Delete
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>cust-001</th>
+                                                                <td>Nimna Kaveesha</td>
+                                                                <td>Kalutara</td>
+                                                                <td>0768539902</td>
+                                                                <td>nimnakaveesha123456@gmail.com</td>
+                                                                <td>
+                                                                    <button class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#customerModal"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Delete
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>cust-001</th>
+                                                                <td>Nimna Kaveesha</td>
+                                                                <td>Kalutara</td>
+                                                                <td>0768539902</td>
+                                                                <td>nimnakaveesha123456@gmail.com</td>
+                                                                <td>
+                                                                    <button class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#customerModal"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Delete
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>cust-001</th>
+                                                                <td>Nimna Kaveesha</td>
+                                                                <td>Kalutara</td>
+                                                                <td>0768539902</td>
+                                                                <td>nimnakaveesha123456@gmail.com</td>
+                                                                <td>
+                                                                    <button class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#customerModal"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Delete
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>cust-001</th>
+                                                                <td>Nimna Kaveesha</td>
+                                                                <td>Kalutara</td>
+                                                                <td>0768539902</td>
+                                                                <td>nimnakaveesha123456@gmail.com</td>
+                                                                <td>
+                                                                    <button class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#customerModal"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Delete
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <th>cust-001</th>
+                                                                <td>Nimna Kaveesha</td>
+                                                                <td>Kalutara</td>
+                                                                <td>0768539902</td>
+                                                                <td>nimnakaveesha123456@gmail.com</td>
+                                                                <td>
+                                                                    <button class="btn btn-warning btn-sm"
+                                                                        data-toggle="modal" data-target="#customerModal"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Edit
+                                                                    </button>
+                                                                </td>
+                                                                <td>
+                                                                    <button class="btn btn-danger btn-sm"
+                                                                        data-student-id="${customer.customerId}">
+                                                                        Delete
+                                                                    </button>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <!-- Add new customer button -->
+                                            <button class="btn btn-success add-customer-btn" style="width: 200px;"
+                                                data-toggle="modal" data-target="#customerModal">
+                                                Add New Customer
+                                            </button>
+
+                                            <!-- Bootstrap Modal for Add New Student Form -->
+                                            <div class="modal fade" id="customerModal" tabindex="-1" role="dialog"
+                                                aria-labelledby="addCustomerModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <!-- Add New Student Form -->
+                                                        <div class="modal-body">
+                                                            <form id="customerForm">
+                                                                <h4 id="customerFormHeading">Add New Customer</h4>
+                                                                <div class="form-group">
+                                                                    <label for="customerId">Customer ID</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="customerId" placeholder="Enter Customer ID"
+                                                                        required disabled>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="Name">Full Name</label>
+                                                                    <input type="text" class="form-control"
+                                                                        id="Name" placeholder="Enter Full Name"
+                                                                        required>
+                                                                </div> 
+                                                                <div class="form-group">
+                                                                    <label for="address">Address</label>
+                                                                    <input type="text" class="form-control" id="address"
+                                                                        placeholder="Enter Address" required>
+                                                                </div>                                                  
+                                                                <div class="form-group">
+                                                                    <label for="contact">Contact</label>
+                                                                    <input type="tel" class="form-control" id="contact"
+                                                                        placeholder="Enter Contact" required>
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="email">Email</label>
+                                                                    <input type="email" class="form-control" id="email"
+                                                                        placeholder="Enter Email" required>
+                                                                </div>
+                                                                <button type="submit" class="btn btn-success"
+                                                                    id="saveUpdateButton">Save</button>
+                                                                <button type="button" class="btn btn-dark"
+                                                                    id="clear">Clear</button>
+                                                                <button hidden type="reset" class="btn btn-dark"
+                                                                    id="reset">Reset</button>
+                                                            </form>
+                                                        </div>
+                                                        <!-- End of Form -->
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+            
     </section>
 
     <script>
@@ -134,6 +397,16 @@
                 sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         }
     </script>
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- alert CDNs -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
 </body>
 
