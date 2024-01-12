@@ -366,6 +366,12 @@ thead th {
   padding: 10px;
 }
 
-.add-customer-btn {
+.add-btn {
   margin-top: 20px;
 }
+
+.home-content .customer-content{
+  display: none;
+}
+
+
