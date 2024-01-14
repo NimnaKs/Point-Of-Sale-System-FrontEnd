@@ -172,7 +172,7 @@ nav .profile-details i{
   font-size: 25px;
   color: #333;
 }
-.home-section .home-content{
+.home-section .content{
   position: relative;
   padding-top: 104px;
 }
@@ -357,10 +357,6 @@ thead th {
   background-color: #e05260;
 }
 
-.home-content .overview-boxes{
-  display: none;
-}
-
 .card {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 10px;
@@ -370,8 +366,22 @@ thead th {
   margin-top: 20px;
 }
 
-.home-content .customer-content{
+#customer{
   display: none;
 }
 
+#product{
+  display: none;
+}
 
+#order{
+  display: none;
+}
+
+#settings{
+  display: none;
+}
+
+body{
+  overflow: hidden;
+}

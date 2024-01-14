@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <title> Dashboard </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css">
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-        integrity="sha512-qYU6qFLwV6xY+Lgh3tkhEcIvDJ4Iv9XdsdM50ffNv2A5xDXti9L0tz6DkraA3p2D46J8gQ/l8DWU6+fpOcQz2DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -23,37 +21,37 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#" class="active">
+                <a href="#" id="homes_page">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" id="customer_page">
                     <i class='bx bx-user'></i>
                     <span class="links_name">Customer</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" id="product_page">
                     <i class='bx bx-box'></i>
                     <span class="links_name">Product</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" id="order_page">
                     <i class='bx bx-list-ul'></i>
                     <span class="links_name">Order list</span>
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="#" id="settings_page">
                     <i class='bx bx-cog'></i>
                     <span class="links_name">Settings</span>
                 </a>
             </li>
             <li class="log_out">
-                <a href="#">
+                <a href="#logout">
                     <i class='bx bx-log-out'></i>
                     <span class="links_name">Log out</span>
                 </a>
@@ -76,55 +74,58 @@
             </div>
         </nav>
 
-        <div class="home-content">
-            <div class="overview-boxes">
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Customers</div>
-                        <div class="number">40</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
+        <div class="content">
+
+            <div class="home-content" id="home">
+                <div class="overview-boxes" id="home">
+                    <div class="box">
+                        <div class="right-side">
+                            <div class="box-topic">Customers</div>
+                            <div class="number">40</div>
+                            <div class="indicator">
+                                <i class='bx bx-up-arrow-alt'></i>
+                                <span class="text">Up from yesterday</span>
+                            </div>
                         </div>
+                        <i class='bx bx-user-plus cart'></i>
                     </div>
-                    <i class='bx bx-user-plus cart'></i>
-                </div>
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Total Products</div>
-                        <div class="number">11</div>
-                        <div class="indicator">
-                            <i class='bx bx-down-arrow-alt down'></i>
-                            <span class="text">Down From Today</span>
+                    <div class="box">
+                        <div class="right-side">
+                            <div class="box-topic">Total Products</div>
+                            <div class="number">11</div>
+                            <div class="indicator">
+                                <i class='bx bx-down-arrow-alt down'></i>
+                                <span class="text">Down From Today</span>
+                            </div>
                         </div>
+                        <i class='bx bx-cart cart four'></i>
                     </div>
-                    <i class='bx bx-cart cart four'></i>
-                </div>
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Total Orders</div>
-                        <div class="number">38</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
+                    <div class="box">
+                        <div class="right-side">
+                            <div class="box-topic">Total Orders</div>
+                            <div class="number">38</div>
+                            <div class="indicator">
+                                <i class='bx bx-up-arrow-alt'></i>
+                                <span class="text">Up from yesterday</span>
+                            </div>
                         </div>
+                        <i class='bx bxl-shopify cart two'></i>
                     </div>
-                    <i class='bx bxl-shopify cart two'></i>
-                </div>
-                <div class="box">
-                    <div class="right-side">
-                        <div class="box-topic">Total Profit</div>
-                        <div class="number">$12</div>
-                        <div class="indicator">
-                            <i class='bx bx-up-arrow-alt'></i>
-                            <span class="text">Up from yesterday</span>
+                    <div class="box">
+                        <div class="right-side">
+                            <div class="box-topic">Total Profit</div>
+                            <div class="number">$12</div>
+                            <div class="indicator">
+                                <i class='bx bx-up-arrow-alt'></i>
+                                <span class="text">Up from yesterday</span>
+                            </div>
                         </div>
+                        <i class='bx bxs-dollar-circle cart three'></i>
                     </div>
-                    <i class='bx bxs-dollar-circle cart three'></i>
                 </div>
             </div>
 
-            <div class="customer-content">
+            <div class="customer-content" id="customer">
                 <section class="intro">
                     <div class="bg-image h-100" style="background-color: #f5f7fa;">
                         <div class="mask d-flex align-items-center h-100">
@@ -149,122 +150,6 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <th class="text-center">cust-001</th>
-                                                                <td class="text-center">Nimna Kaveesha</td>
-                                                                <td class="text-center">Kalutara</td>
-                                                                <td class="text-center">0768539902</td>
-                                                                <td class="text-center">nimnakaveesha123456@gmail.com</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm"
-                                                                        data-toggle="modal" data-target="#customerModal"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th class="text-center">cust-001</th>
-                                                                <td class="text-center">Nimna Kaveesha</td>
-                                                                <td class="text-center">Kalutara</td>
-                                                                <td class="text-center">0768539902</td>
-                                                                <td class="text-center">nimnakaveesha123456@gmail.com</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm"
-                                                                        data-toggle="modal" data-target="#customerModal"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr><tr>
-                                                                <th class="text-center">cust-001</th>
-                                                                <td class="text-center">Nimna Kaveesha</td>
-                                                                <td class="text-center">Kalutara</td>
-                                                                <td class="text-center">0768539902</td>
-                                                                <td class="text-center">nimnakaveesha123456@gmail.com</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm"
-                                                                        data-toggle="modal" data-target="#customerModal"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr><tr>
-                                                                <th class="text-center">cust-001</th>
-                                                                <td class="text-center">Nimna Kaveesha</td>
-                                                                <td class="text-center">Kalutara</td>
-                                                                <td class="text-center">0768539902</td>
-                                                                <td class="text-center">nimnakaveesha123456@gmail.com</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm"
-                                                                        data-toggle="modal" data-target="#customerModal"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr><tr>
-                                                                <th class="text-center">cust-001</th>
-                                                                <td class="text-center">Nimna Kaveesha</td>
-                                                                <td class="text-center">Kalutara</td>
-                                                                <td class="text-center">0768539902</td>
-                                                                <td class="text-center">nimnakaveesha123456@gmail.com</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm"
-                                                                        data-toggle="modal" data-target="#customerModal"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr><tr>
-                                                                <th class="text-center">cust-001</th>
-                                                                <td class="text-center">Nimna Kaveesha</td>
-                                                                <td class="text-center">Kalutara</td>
-                                                                <td class="text-center">0768539902</td>
-                                                                <td class="text-center">nimnakaveesha123456@gmail.com</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm"
-                                                                        data-toggle="modal" data-target="#customerModal"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm"
-                                                                        data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -292,15 +177,14 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="Name">Full Name</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="Name" placeholder="Enter Full Name"
-                                                                        required>
-                                                                </div> 
+                                                                    <input type="text" class="form-control" id="Name"
+                                                                        placeholder="Enter Full Name" required>
+                                                                </div>
                                                                 <div class="form-group">
                                                                     <label for="address">Address</label>
                                                                     <input type="text" class="form-control" id="address"
                                                                         placeholder="Enter Address" required>
-                                                                </div>                                                  
+                                                                </div>
                                                                 <div class="form-group">
                                                                     <label for="contact">Contact</label>
                                                                     <input type="tel" class="form-control" id="contact"
@@ -339,7 +223,7 @@
 
             </div>
 
-            <div class="product-content">
+            <div class="product-content" id="product">
                 <section class="intro">
                     <div class="bg-image h-100" style="background-color: #f5f7fa;">
                         <div class="mask d-flex align-items-center h-100">
@@ -348,7 +232,9 @@
                                     <div class="col-12">
                                         <div class="card">
                                             <div class="card-body p-0">
-                                                <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true" style="position: relative; height: 500px;">
+                                                <div class="table-responsive table-scroll"
+                                                    data-mdb-perfect-scrollbar="true"
+                                                    style="position: relative; height: 500px;">
                                                     <table class="table table-striped mb-0">
                                                         <thead style="background-color: #002d72; text-align: center;">
                                                             <tr>
@@ -362,111 +248,9 @@
                                                             </tr>
                                                         </thead>
                                                         <tbody>
-                                                            <tr>
-                                                                <th class="text-center">item-001</th>
-                                                                <td class="text-center"><img src="image/appl.jpeg" class="img-thumbnail" style="width: 50px;" alt="..."></td>
-                                                                <td class="text-center">Apple</td>
-                                                                <td class="text-center">21</td>
-                                                                <td class="text-center">120.25</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#customerModal" data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm" data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th class="text-center">item-001</th>
-                                                                <td class="text-center"><img src="image/appl.jpeg" class="img-thumbnail" style="width: 50px;" alt="..."></td>
-                                                                <td class="text-center">Apple</td>
-                                                                <td class="text-center">21</td>
-                                                                <td class="text-center">120.25</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#customerModal" data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm" data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th class="text-center">item-001</th>
-                                                                <td class="text-center"><img src="image/appl.jpeg" class="img-thumbnail" style="width: 50px;" alt="..."></td>
-                                                                <td class="text-center">Apple</td>
-                                                                <td class="text-center">21</td>
-                                                                <td class="text-center">120.25</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#customerModal" data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm" data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th class="text-center">item-001</th>
-                                                                <td class="text-center"><img src="image/appl.jpeg" class="img-thumbnail" style="width: 50px;" alt="..."></td>
-                                                                <td class="text-center">Apple</td>
-                                                                <td class="text-center">21</td>
-                                                                <td class="text-center">120.25</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#customerModal" data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm" data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th class="text-center">item-001</th>
-                                                                <td class="text-center"><img src="image/appl.jpeg" class="img-thumbnail" style="width: 50px;" alt="..."></td>
-                                                                <td class="text-center">Apple</td>
-                                                                <td class="text-center">21</td>
-                                                                <td class="text-center">120.25</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#customerModal" data-student-id="${customer.customerId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm" data-student-id="${customer.customerId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th class="text-center">item-001</th>
-                                                                <td class="text-center"><img src="image/appl.jpeg" class="img-thumbnail" style="width: 50px;" alt="..."></td>
-                                                                <td class="text-center">Apple</td>
-                                                                <td class="text-center">21</td>
-                                                                <td class="text-center">120.25</td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-warning btn-sm" data-toggle="modal" data-target="#productModal" data-student-id="${product.productId}">
-                                                                        Edit
-                                                                    </button>
-                                                                </td>
-                                                                <td class="text-center">
-                                                                    <button class="btn btn-danger btn-sm" data-student-id="${product.productId}">
-                                                                        Delete
-                                                                    </button>
-                                                                </td>
-                                                            </tr>
                                                         </tbody>
                                                     </table>
-                                                </div>                                                
+                                                </div>
                                             </div>
                                             <!-- Add new customer button -->
                                             <button class="btn btn-success add-btn" style="width: 200px;"
@@ -479,11 +263,11 @@
                                                 aria-labelledby="addProductModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog" role="document">
                                                     <div class="modal-content">
-                                                        <!-- Add New Student Form -->
                                                         <div class="modal-body">
                                                             <form id="productForm">
                                                                 <h4 id="productFormHeading">Add New Product</h4>
-                                                                <td><img src="image/appl.jpeg" class="img-thumbnail mb-2"  alt="..."></td>
+                                                                <td><img src="image/appl.jpeg"
+                                                                        class="img-thumbnail mb-2" alt="..."></td>
                                                                 <div class="form-group">
                                                                     <label for="productId">Product ID</label>
                                                                     <input type="text" class="form-control"
@@ -492,24 +276,25 @@
                                                                 </div>
                                                                 <div class="form-group">
                                                                     <label for="Desc">Description</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="Desc" placeholder="Enter Description"
-                                                                        required>
-                                                                </div> 
+                                                                    <input type="text" class="form-control" id="Desc"
+                                                                        placeholder="Enter Description" required>
+                                                                </div>
                                                                 <div class="form-group">
                                                                     <label for="image-url">Image Path</label>
-                                                                    <input type="text" class="form-control" id="image-url"
-                                                                        placeholder="Enter Image Path" required>
-                                                                </div>                                                  
+                                                                    <input type="text" class="form-control"
+                                                                        id="image-url" placeholder="Enter Image Path"
+                                                                        required>
+                                                                </div>
                                                                 <div class="form-group">
                                                                     <label for="qty">Stock Qty</label>
                                                                     <input type="number" class="form-control" id="qty"
                                                                         placeholder="Enter Qty" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="unitprice">Email</label>
-                                                                    <input type="text" class="form-control" id="unitprice"
-                                                                        placeholder="Enter Unit Price" required>
+                                                                    <label for="unitprice">unitprice</label>
+                                                                    <input type="number" class="form-control"
+                                                                        id="unitprice" placeholder="Enter Unit Price"
+                                                                        required>
                                                                 </div>
                                                                 <button type="submit" class="btn btn-success"
                                                                     id="saveUpdateButton">Save</button>
@@ -539,9 +324,21 @@
 
             </div>
 
+            <div class="order-content" id="order">
+            </div>
+
+            <div class="settings-content" id="Settings">
+            </div>
+
+        </div>    
+
     </section>
 
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
     <script>
+
         let sidebar = document.querySelector(".sidebar");
         let sidebarBtn = document.querySelector(".sidebarBtn");
         sidebarBtn.onclick = function () {
@@ -551,10 +348,47 @@
             } else
                 sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         }
-    </script>
 
-    <!-- jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        const myFunction = function (i) {
+            let id = ['#home_page', '#customer_page', '#product_page', '#order_page', '#settings_page'];
+            let loadingScreens = ['#home', '#customer', '#product', '#order', '#settings'];
+            for (let j = 0; j < id.length; j++) {
+                if (i === j) {
+                    $(loadingScreens[j]).css('display', 'block');
+                    $(id[j]).addClass("active");
+                    console.log(id[j])
+                } else {
+                    $(loadingScreens[j]).css('display', 'none');
+                    $(id[j]).removeClass("active");
+                }
+            }
+        }
+
+        $(document).ready(function () {
+
+            $('#homes_page').on('click', () => {
+                myFunction(0);
+            });
+
+            $('#customer_page').on('click', function () {
+                myFunction(1);
+            });
+
+            $('#product_page').on('click', function () {
+                myFunction(2);
+            });
+
+            $('#order_page').on('click', function () {
+                myFunction(3);
+            });
+
+            $('#settings_page').on('click', function () {
+                myFunction(4);
+            });
+        });
+
+
+    </script>
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
