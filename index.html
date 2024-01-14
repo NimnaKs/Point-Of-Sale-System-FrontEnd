@@ -10,7 +10,8 @@
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport"
+        content="height=device-height,width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 </head>
 
 <body>
@@ -44,7 +45,7 @@
                     <span class="links_name">Order</span>
                 </a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#" id="settings_page">
                     <i class='bx bx-cog'></i>
                     <span class="links_name">Settings</span>
@@ -55,7 +56,7 @@
                     <i class='bx bx-log-out'></i>
                     <span class="links_name">Log out</span>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
     <section class="home-section">
@@ -77,6 +78,19 @@
         <div class="content">
 
             <div class="home-content" id="home">
+
+                <div class="welcome-card" style="margin-top: -20px;">
+                    <div class="card m-3" style="border-radius: 8px; 
+                    background: linear-gradient(115deg, #97abff, #123593);
+                    color: #f5f7fa;
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);">
+                        <div class="card-body">
+                            <h5 class="card-title">Welcome to dashboard !</h5>
+                            <p class="card-text">Hello Nimna Kaveesha, welcome to your awesome dashboard !</p>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="overview-boxes" id="home">
                     <div class="box">
                         <div class="right-side">
@@ -123,6 +137,27 @@
                         <i class='bx bxs-dollar-circle cart three'></i>
                     </div>
                 </div>
+
+                <div class="row m-3">
+
+                    <div class="card m-1 cards col-md-12" style="border-radius: 8px; 
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Monthly Income of last 12 months</h5>
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- <div class="card m-3 cards" style="border-radius: 8px; 
+                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">Out of Stock Products</h5>
+
+                        </div>
+                    </div> -->
+
+                </div>
+
             </div>
 
             <div class="customer-content" id="customer">
@@ -619,12 +654,11 @@
 
             </div>
 
-            <div class="settings-content" id="Settings">
-            </div>
-
         </div>
 
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -681,6 +715,30 @@
             });
         });
 
+        const incomeData = [1000, 1200, 800, 1500, 2000, 1800, 1600, 2200, 2500, 2100, 1800, 2000];
+
+        const ctx = $('#myChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'],
+                datasets: [{
+                    label: 'Earnings in Rs',
+                    data: incomeData,
+                    backgroundColor:[
+                        '#cce5ff'
+                    ],
+                    borderColor: [
+                        '#66b0ff'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive : true
+            }
+        });
 
     </script>
 
