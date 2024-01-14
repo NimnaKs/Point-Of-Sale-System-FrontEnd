@@ -432,3 +432,21 @@ thead th {
   color: #6c757d;
 }
 
+.overview{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.cards {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .cards {
+    width: 30%;
+  }
+}
+

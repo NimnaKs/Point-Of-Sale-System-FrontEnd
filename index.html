@@ -138,9 +138,9 @@
                     </div>
                 </div>
 
-                <div class="row m-3">
+                <div class="row m-3 overview">
 
-                    <div class="card m-1 cards col-md-12" style="border-radius: 8px; 
+                    <div class="card m-1 cards col-md-8" style="border-radius: 8px; 
                     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);">
                         <div class="card-body">
                             <h5 class="card-title text-center">Monthly Income of last 12 months</h5>
@@ -148,13 +148,34 @@
                         </div>
                     </div>
 
-                    <!-- <div class="card m-3 cards" style="border-radius: 8px; 
-                    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);">
+
+                    <div id = "outStockTable" class="card m-1 cards" style="border-radius: 8px; 
+                        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+                        height: 24rem;">
                         <div class="card-body">
                             <h5 class="card-title text-center">Out of Stock Products</h5>
-
+                            <div class="table-responsive table-scroll" data-mdb-perfect-scrollbar="true"
+                                style="position: relative; height: 200px;">
+                                <table class="table table-striped mb-0">
+                                    <thead style="background-color: #002d72; text-align: center;">
+                                        <tr>
+                                            <th scope="col" class="text-center">ID
+                                            </th>
+                                            <th scope="col" class="text-center">
+                                                Item
+                                            </th>
+                                            <th scope="col" class="text-center">
+                                                Description
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
-                    </div> -->
+                    </div>
+
 
                 </div>
 
@@ -726,17 +747,18 @@
                 datasets: [{
                     label: 'Earnings in Rs',
                     data: incomeData,
-                    backgroundColor:[
-                        '#cce5ff'
-                    ],
+                    // backgroundColor:[
+                    //     '#cce5ff'
+                    // ],
                     borderColor: [
                         '#66b0ff'
                     ],
-                    borderWidth: 1
+                    borderWidth: 3,
+                    fill: false
                 }]
             },
             options: {
-                responsive : true
+                responsive: true
             }
         });
 
