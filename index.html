@@ -21,7 +21,7 @@
         </div>
         <ul class="nav-links">
             <li>
-                <a href="#" id="homes_page">
+                <a href="#" id="home_page" class="active">
                     <i class='bx bx-grid-alt'></i>
                     <span class="links_name">Dashboard</span>
                 </a>
@@ -62,7 +62,7 @@
         <nav>
             <div class="sidebar-button">
                 <i class='bx bx-menu sidebarBtn'></i>
-                <span class="dashboard" style="text-align: center;">Product Details</span>
+                <span class="dashboard" style="text-align: center;">Dashboard</span>
             </div>
             <div class="search-box">
                 <input type="text" placeholder="Search...">
@@ -349,7 +349,7 @@
                 sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
         }
 
-        const myFunction = function (i) {
+        const myFunction = function (i,page_name) {
             let id = ['#home_page', '#customer_page', '#product_page', '#order_page', '#settings_page'];
             let loadingScreens = ['#home', '#customer', '#product', '#order', '#settings'];
             for (let j = 0; j < id.length; j++) {
@@ -362,28 +362,30 @@
                     $(id[j]).removeClass("active");
                 }
             }
+
+            $('.dashboard').text(page_name);
         }
 
         $(document).ready(function () {
 
-            $('#homes_page').on('click', () => {
-                myFunction(0);
+            $('#home_page').on('click', () => {
+                myFunction(0,'Dashboard');
             });
 
             $('#customer_page').on('click', function () {
-                myFunction(1);
+                myFunction(1,'Customer Details');
             });
 
             $('#product_page').on('click', function () {
-                myFunction(2);
+                myFunction(2,'Product Details');
             });
 
             $('#order_page').on('click', function () {
-                myFunction(3);
+                myFunction(3,'Order Details');
             });
 
             $('#settings_page').on('click', function () {
-                myFunction(4);
+                myFunction(4,'Settings');
             });
         });
 
