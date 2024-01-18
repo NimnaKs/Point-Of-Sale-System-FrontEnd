@@ -149,7 +149,7 @@
                     </div>
 
 
-                    <div id = "outStockTable" class="card m-1 cards" style="border-radius: 8px; 
+                    <div id="outStockTable" class="card m-1 cards" style="border-radius: 8px; 
                         box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
                         height: 24rem;">
                         <div class="card-body">
@@ -206,7 +206,7 @@
                                                                 <th scope="col">Delete</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody id = "cust-table-body">
+                                                        <tbody id="cust-table-body">
                                                         </tbody>
                                                     </table>
                                                 </div>
@@ -214,7 +214,7 @@
 
                                             <!-- Add new customer button -->
                                             <button class="btn btn-success add-btn" style="width: 200px;"
-                                                data-toggle="modal" data-target="#customerModal" id = "custAddBtn">
+                                                data-toggle="modal" data-target="#customerModal" id="custAddBtn">
                                                 Add New Customer
                                             </button>
 
@@ -297,7 +297,7 @@
                                                         <thead style="background-color: #002d72; text-align: center;">
                                                             <tr>
                                                                 <th scope="col" class="text-center">ID</th>
-                                                                <th scope="col" class="text-center">Product</th>
+                                                                <!-- <th scope="col" class="text-center">Product</th> -->
                                                                 <th scope="col" class="text-center">Description</th>
                                                                 <th scope="col" class="text-center">Stock Qty</th>
                                                                 <th scope="col" class="text-center">Unit Price</th>
@@ -305,14 +305,14 @@
                                                                 <th scope="col" class="text-center">Delete</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody>
+                                                        <tbody id="item-table-body">
                                                         </tbody>
                                                     </table>
                                                 </div>
                                             </div>
                                             <!-- Add new customer button -->
                                             <button class="btn btn-success add-btn" style="width: 200px;"
-                                                data-toggle="modal" data-target="#productModal">
+                                                data-toggle="modal" data-target="#productModal" id="addItemBtn">
                                                 Add New Product
                                             </button>
 
@@ -324,8 +324,9 @@
                                                         <div class="modal-body">
                                                             <form id="productForm">
                                                                 <h4 id="productFormHeading">Add New Product</h4>
-                                                                <td><img src="image/appl.jpeg"
-                                                                        class="img-thumbnail mb-2" alt="..."></td>
+                                                                <!-- <div class="center-image">
+                                                                    <img src="image/empthy.jpeg" class="img-thumbnail mb-2" alt="..." id="previewImage">
+                                                                </div>                                                               -->
                                                                 <div class="form-group">
                                                                     <label for="productId">Product ID</label>
                                                                     <input type="text" class="form-control"
@@ -337,12 +338,25 @@
                                                                     <input type="text" class="form-control" id="Desc"
                                                                         placeholder="Enter Description" required>
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <label for="image-url">Image Path</label>
-                                                                    <input type="text" class="form-control"
-                                                                        id="image-url" placeholder="Enter Image Path"
-                                                                        required>
-                                                                </div>
+                                                                <!-- <div class="form-group">
+                                                                    <div class="mb-3">
+                                                                        <div class="mb-3">
+                                                                            <label for="imageInput"
+                                                                                class="form-label">Select an
+                                                                                image</label>
+                                                                            <div class="input-group">
+                                                                                <input type="file" class="form-control"
+                                                                                    id="imageInput" name="image"
+                                                                                    accept="image/*"
+                                                                                    aria-describedby="inputGroupFileAddon">
+                                                                                <label
+                                                                                    class="input-group-text btn btn-primary"
+                                                                                    for="imageInput"
+                                                                                    id="inputGroupFileAddon">Upload</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> -->
                                                                 <div class="form-group">
                                                                     <label for="qty">Stock Qty</label>
                                                                     <input type="number" class="form-control" id="qty"
@@ -689,6 +703,8 @@
     <script src="script.js"></script>
 
     <script type="module" src="controller/customerController.js"></script>
+    <script type="module" src="controller/itemController.js"></script>
+
 
     <!-- Bootstrap JS and Popper.js (required for Bootstrap JavaScript components) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>

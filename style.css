@@ -450,3 +450,20 @@ thead th {
   }
 }
 
+.input-group-text.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.input-group-text.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+  color: #fff;
+}
+
+.center-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
