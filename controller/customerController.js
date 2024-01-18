@@ -12,17 +12,24 @@ let address = $('#address');
 let contact = $('#contact');
 let email = $('#email');
 
-let CustomerApi = new CustomerApi();
+let customerApi = new CustomerApi();
 
+custAddBtn.on('click', () => {
+    openCustomerModal('Add New Customer', 'Save', 'btn-success');
+    generateCustomerId();
+});
 
 function generateCustomerId() {
-    try {
-        const custId = await dbprogress.generateStudentId();
-        customerId.val(JSON.parse(custId));
-    } catch (error) {
-        showError('Fetching Error', 'Error generating student ID');
-    }
+    customerApi.generateCustomerId()
+        .then(custId => {
+            customerId.val(custId);
+        })
+        .catch(error => {
+            console.log(error);
+            showError('Fetching Error', 'Error generating student ID');
+        });
 }
+
 
 function showError(title, text) {
     Swal.fire({
@@ -32,6 +39,7 @@ function showError(title, text) {
         footer: '<a href="">Why do I have this issue?</a>'
     });
 }
+
 
 
 
