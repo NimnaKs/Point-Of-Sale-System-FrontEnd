@@ -65,7 +65,7 @@
                 <i class='bx bx-menu sidebarBtn'></i>
                 <span class="dashboard" style="text-align: center;">Dashboard</span>
             </div>
-            <div class="search-box">
+            <div class="search-box" id="searchInput">
                 <input type="text" placeholder="Search...">
                 <i class='bx bx-search'></i>
             </div>
@@ -214,7 +214,7 @@
 
                                             <!-- Add new customer button -->
                                             <button class="btn btn-success add-btn" style="width: 200px;"
-                                                data-toggle="modal" data-target="#customerModal">
+                                                data-toggle="modal" data-target="#customerModal" id = "custAddBtn">
                                                 Add New Customer
                                             </button>
 
@@ -254,11 +254,11 @@
                                                                         placeholder="Enter Email" required>
                                                                 </div>
                                                                 <button type="submit" class="btn btn-success"
-                                                                    id="saveUpdateButton">Save</button>
+                                                                    id="custSaveUpdateButton">Save</button>
                                                                 <button type="button" class="btn btn-dark"
-                                                                    id="clear">Clear</button>
+                                                                    id="custClear">Clear</button>
                                                                 <button hidden type="reset" class="btn btn-dark"
-                                                                    id="reset">Reset</button>
+                                                                    id="custReset">Reset</button>
                                                             </form>
                                                         </div>
                                                         <!-- End of Form -->
