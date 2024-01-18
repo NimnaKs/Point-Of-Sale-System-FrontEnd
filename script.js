@@ -1,4 +1,3 @@
-let search = $('#searchInput');
 
 let sidebar = document.querySelector(".sidebar");
 let sidebarBtn = document.querySelector(".sidebarBtn");
@@ -76,9 +75,3 @@ new Chart(ctx, {
     }
 });
 
-search.on("keyup", function () {
-    let value = $(this).val().toLowerCase();
-    $("tbody tr").filter(function () {
-        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-    });
-});

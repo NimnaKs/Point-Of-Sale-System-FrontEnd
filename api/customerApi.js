@@ -12,8 +12,13 @@ export class CustomerApi {
             });
 
             if (response.ok) {
-                const responseData = await response.json();
-                return responseData;
+                const contentType = response.headers.get("content-type");
+                if (contentType && contentType.includes("application/json")) {
+                    const responseData = await response.json();
+                    return responseData;
+                } else {
+                    return await response.text();
+                }
             } else {
                 throw new Error(`HTTP request failed with status ${response.status}`);
             }
@@ -22,35 +27,34 @@ export class CustomerApi {
         }
     }
 
-    // Updated getAllStudent using Fetch API
-    async getAllStudent() {
-        return handleHttpRequest("http://localhost:8080/poss/customer?action=getAllCustomers", "GET");
+    // Updated getAllCustomer using Fetch API
+    async getAllCustomer() {
+        return this.handleHttpRequest("http://localhost:8080/poss/customer?action=getAllCustomers", "GET");
     }
 
-    // Updated deleteStudent using Fetch API
-    async deleteStudent(custId) {
-        return handleHttpRequest(`http://localhost:8080/poss/customer?customerId=${custId}`, "DELETE");
+    // Updated deleteCustomerusing Fetch API
+    async deleteCustomer(custId) {
+        return this.handleHttpRequest(`http://localhost:8080/poss/customer?customerId=${custId}`, "DELETE");
     }
 
     // Updated generateCustomerId using Fetch API
     async generateCustomerId() {
-        return handleHttpRequest("http://localhost:8080/poss/customer?action=getCustomerId", "GET");
+        return this.handleHttpRequest("http://localhost:8080/poss/customer?action=getCustomerId", "GET");
     }
 
     // Updated updateCustomer using Fetch API
     async updateCustomer(customer) {
-        return handleHttpRequest("http://localhost:8080/poss/customer", "PUT", customer);
+        return this.handleHttpRequest("http://localhost:8080/poss/customer", "PUT", customer);
     }
 
     // Updated saveCustomer using Fetch API
     async saveCustomer(customer) {
-        return handleHttpRequest("http://localhost:8080/poss/customer", "POST", customer);
+        return this.handleHttpRequest("http://localhost:8080/poss/customer", "POST", customer);
     }
 
-    // Updated getStudent using Fetch API
-    async getStudent(custId) {
-        return handleHttpRequest(`http://localhost:8080/poss/customer?action=getCustomer&customerId=${custId}`, "GET");
+    // Updated getCustomer using Fetch API
+    async getCustomer(custId) {
+        return this.handleHttpRequest(`http://localhost:8080/poss/customer?action=getCustomer&customerId=${custId}`, "GET");
     }
 
 }
-

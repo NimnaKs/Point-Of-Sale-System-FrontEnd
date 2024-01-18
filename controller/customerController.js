@@ -12,7 +12,23 @@ let address = $('#address');
 let contact = $('#contact');
 let email = $('#email');
 
+const emailPattern = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$");
+const mobilePattern = new RegExp("^(?:0|94|\\+94|0094)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|91)(0|2|3|4|5|7|9)|7(0|1|2|4|5|6|7|8)\\d)\\d{6}$");
+
 let customerApi = new CustomerApi();
+
+let search = $('#searchInput');
+
+$('#customer_page').on('click', function() {
+    populateCustomerTable();
+});
+
+search.on("input", function () {
+    let value = $(this).val().toLowerCase();
+    $("#cust-table-body tr").filter(function () {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+});
 
 custAddBtn.on('click', () => {
     openCustomerModal('Add New Customer', 'Save', 'btn-success');
@@ -79,6 +95,7 @@ custSaveUpdateBtn.on('click', (event) => {
                     populateCustomerTable();
                 })
                 .catch((error) => {
+                    console.log(error);
                     showError('Update Unsucessfull', error);
                 });
         }
@@ -93,17 +110,17 @@ custSaveUpdateBtn.on('click', (event) => {
 
 custClear.on('click', () => {
     custReset.click();
-    generateStudentId();
+    generateCustomerId();
 });
 
 
 function populateCustomerTable() {
     customerApi.getAllCustomer()
         .then((responseText) => {
-            let customer_db = JSON.parse(responseText);
-            $('tbody').eq(0).empty();
+            let customer_db = responseText;
+            $('#cust-table-body').empty();
             customer_db.forEach((customer) => {
-                $('tbody').eq(0).append(
+                $('#cust-table-body').append(
                     `<tr>
                         <th row='span'>${customer.customerId}</th>
                         <td>${customer.name}</td>
@@ -133,7 +150,7 @@ function populateCustomerTable() {
 
 $('tbody').on('click', '.updateBtn', function () {
     const customerId = $(this).data('customer-id');
-    openStudentModal('Update Customer', 'Update', 'btn-warning', customerId);
+    openCustomerModal('Update Customer', 'Update', 'btn-warning', customerId);
 });
 
 $('tbody').on('click', '.deleteBtn', function () {
@@ -187,7 +204,7 @@ function openCustomerModal(heading, buttonText, buttonClass, custId) {
     if (custId) {
         customerApi.getCustomer(custId)
                 .then((responseText) => {
-                    let customer = JSON.parse(responseText);
+                    let customer = responseText;
                     customerId.val(customer.customerId);
                     name.val(customer.name);
                     address.val(customer.address); 
